@@ -17,8 +17,8 @@ func init() {
                 "host":     config.Env("DB_HOST", "127.0.0.1"),
                 "port":     config.Env("DB_PORT", "3306"),
                 "database": config.Env("DB_DATABASE", "gohub"),
-                "username": config.Env("DB_USERNAME", ""),
-                "password": config.Env("DB_PASSWORD", ""),
+                "username": config.Env("DB_USERNAME", "huaixu"),
+                "password": config.Env("DB_PASSWORD", "Fwj20051229"),
                 "charset":  "utf8mb4",
 
                 // 连接池配置

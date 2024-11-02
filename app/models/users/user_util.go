@@ -1,11 +1,14 @@
-package user
+package users
 
-// 判断email是否已被注册
+import (
+    "gohub/pkg/database"
+)
 
+// IsEmailExist 判断 Email 已被注册
 func IsEmailExist(email string) bool {
-	var count int64
-	db.Model(User{}).Where("email = ?", email).Count(&count)
-	return count > 0
+    var count int64
+    database.DB.Model(User{}).Where("email = ?", email).Count(&count)
+    return count > 0
 }
 
 // IsPhoneExist 判断手机号已被注册
