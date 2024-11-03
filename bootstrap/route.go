@@ -17,10 +17,11 @@ func SetRoute(r *gin.Engine) {
 	setup404Handler(r)
 }
 
+// 设置全局中间件
 func registerGlobalMiddleWare(router *gin.Engine) {
     router.Use(
         middlewares.Logger(),
-        gin.Recovery(),
+        middlewares.Recovery(),
     )
 }
 
